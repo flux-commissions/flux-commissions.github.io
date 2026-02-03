@@ -252,7 +252,7 @@
                     </svg>
                 </div>
                 <h3>Basic Site</h3>
-                <div class="price">£199</div>
+                <div class="price" data-gbp="199">£199</div>
                 <ul class="feature-list">
                     <li>5 pages max</li>
                     <li>Mobile responsive</li>
@@ -272,7 +272,7 @@
                     </svg>
                 </div>
                 <h3>Pro Site</h3>
-                <div class="price">£399</div>
+                <div class="price" data-gbp="399">£399</div>
                 <ul class="feature-list">
                     <li>10 pages max</li>
                     <li>Everything in Basic</li>
@@ -293,7 +293,7 @@
                     </svg>
                 </div>
                 <h3>Online Store</h3>
-                <div class="price">£799</div>
+                <div class="price" data-gbp="799">£799</div>
                 <ul class="feature-list">
                     <li>Full ecommerce setup</li>
                     <li>Payment processing</li>
@@ -314,7 +314,7 @@
                     </svg>
                 </div>
                 <h3>10 Commands</h3>
-                <div class="price">£79</div>
+                <div class="price" data-gbp="79">£79</div>
                 <ul class="feature-list">
                     <li>10 custom commands</li>
                     <li>Basic moderation</li>
@@ -334,7 +334,7 @@
                     </svg>
                 </div>
                 <h3>25 Commands</h3>
-                <div class="price">£149</div>
+                <div class="price" data-gbp="149">£149</div>
                 <ul class="feature-list">
                     <li>25 custom commands</li>
                     <li>Everything in 10</li>
@@ -354,7 +354,7 @@
                     </svg>
                 </div>
                 <h3>50 Commands</h3>
-                <div class="price">£299</div>
+                <div class="price" data-gbp="299">£299</div>
                 <ul class="feature-list">
                     <li>50 custom commands</li>
                     <li>Everything in 25</li>
@@ -373,7 +373,7 @@
                     </svg>
                 </div>
                 <h3>Premium Bot</h3>
-                <div class="price">£499</div>
+                <div class="price" data-gbp="499">£499</div>
                 <ul class="feature-list">
                     <li>Unlimited commands</li>
                     <li>Everything in 50</li>
@@ -394,7 +394,7 @@
                     </svg>
                 </div>
                 <h3>Enterprise</h3>
-                <div class="price">£999</div>
+                <div class="price" data-gbp="999">£999</div>
                 <ul class="feature-list">
                     <li>Fully custom</li>
                     <li>Dedicated dev team</li>
@@ -413,7 +413,7 @@
                     </svg>
                 </div>
                 <h3>Maintenance</h3>
-                <div class="price">£49<span style="font-size: 16px; font-weight: 400; color: #888;">/mo</span></div>
+                <div class="price" data-gbp="49">£49<span style="font-size: 16px; font-weight: 400; color: #888;">/mo</span></div>
                 <ul class="feature-list">
                     <li>Bug fixes</li>
                     <li>Feature updates</li>
@@ -441,6 +441,68 @@
             });
         });
     </script>
+
+<script>
+(async function () {
+    try {
+        const geo = await fetch("https://ipapi.co/json/").then(r => r.json());
+        const currency = geo.currency || "GBP";
+
+        const fx = await fetch("https://api.frankfurter.app/latest?from=GBP")
+            .then(r => r.json());
+
+        const rate = fx.rates[currency];
+        if (!rate) return;
+
+        const symbols = {
+            USD: "$",
+            EUR: "€",
+            GBP: "£",
+            CAD: "CAD ",
+            AUD: "AUD ",
+            BRL: "BRL ",
+            CHF: "CHF ",
+            CNY: "CNY ",
+            CZK: "CZK ",
+            DKK: "DKK ",
+            HKD: "HKD ",
+            HUF: "HUF ",
+            IDR: "IDR ",
+            ILS: "ILS ",
+            INR: "₹",
+            ISK: "ISK ",
+            JPY: "¥",
+            KRW: "KRW ",
+            MXN: "MXN ",
+            MYR: "MYR ",
+            NOK: "NOK ",
+            NZD: "NZD ",
+            PHP: "PHP ",
+            PLN: "PLN ",
+            RON: "RON ",
+            SEK: "SEK ",
+            SGD: "SGD ",
+            THB: "THB ",
+            TRY: "TRY ",
+            ZAR: "ZAR "
+        };
+
+        const symbol = symbols[currency] || currency + " ";
+
+        document.querySelectorAll(".price").forEach(el => {
+            const gbp = parseFloat(el.dataset.gbp);
+            if (!gbp) return;
+
+            const converted = Math.round(gbp * rate);
+            el.innerHTML = symbol + converted;
+        });
+
+        console.log("Currency converted to", currency);
+    } catch (err) {
+        console.error("FX failed:", err);
+    }
+})();
+</script>
 
 </body>
 </html>
