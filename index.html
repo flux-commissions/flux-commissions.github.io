@@ -23,6 +23,11 @@ body {
     line-height: 1.6;
 }
 
+.special-price {
+  color: #e67e22;
+  font-weight: bold;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -80,7 +85,7 @@ nav {
 .hero p {
     font-size: 20px;
     color: #aaa;
-    max-width: 640px;
+    max-width: 680px;
     margin-bottom: 32px;
 }
 
@@ -118,7 +123,7 @@ h2 {
 
 .section-sub {
     color: #999;
-    max-width: 640px;
+    max-width: 680px;
     margin-bottom: 50px;
 }
 
@@ -225,6 +230,7 @@ footer {
     border-top: 1px solid #1a1a1a;
     color: #777;
     font-size: 14px;
+    line-height: 1.8;
 }
 
 /* MOBILE */
@@ -248,21 +254,23 @@ footer {
     <div class="nav-links">
         <a href="#web">Web</a>
         <a href="#bots">Bots</a>
+        <a href="#apps">Apps</a>
+        <a href="#scripts">Scripts</a>
         <a href="#hosting">Hosting</a>
-        <a href="#trust">Why Cheap</a>
+        <a href="#custom">Other</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
 
 <div class="hero">
     <h1>
-        Websites, bots,<br>
+        Websites, bots, apps, scripts,<br>
         and absurdly cheap hosting,<br>
         without the agency tax.
     </h1>
 
     <p>
-        Custom websites, Discord bots, and hosting built for real people.
+        Custom websites, Discord bots, scripts, apps, internal tools, and more.
         No packages full of nonsense. No inflated pricing.
     </p>
 
@@ -275,125 +283,191 @@ footer {
     <a href="http://dsc.gg/tatom" class="btn">Join our Discord</a>
 </div>
 
+<!-- 1. Websites -->
 <section id="web">
     <h2>Websites</h2>
-    <p class="section-sub">
-        Personal sites, portfolios, landing pages, business websites.
-        We price based on complexity, not page counts.
-    </p>
-
+    <p class="section-sub">Personal sites, portfolios, landing pages, business websites, and online stores / ecommerce.</p>
     <div class="grid">
         <div class="card">
-            <h3>Custom Website</h3>
-            <div class="price">€5 to €50</div>
+            <h3>Personal / Portfolio / Landing Pages</h3>
+            <div class="price">Starting from just €5</div>
             <ul>
-                <li>Fully custom build</li>
+                <li>Custom design</li>
                 <li>No artificial limits</li>
-                <li>Designed for your goal</li>
+                <li>Responsive layouts</li>
             </ul>
             <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
         </div>
-
         <div class="card">
-            <h3>Online Store</h3>
-            <div class="price">€50 to €300</div>
+            <h3>Business Websites</h3>
+            <div class="price">Starting from just €10</div>
             <ul>
-                <li>Custom ecommerce setup</li>
-                <li>Payments and products</li>
-                <li>Scales with your needs</li>
+                <li>Professional layout & branding</li>
+                <li>Multiple pages</li>
+                <li>Optimized for conversion</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+        <div class="card">
+            <h3>Online Stores / Ecommerce</h3>
+            <div class="price">Starting from just €50</div>
+            <ul>
+                <li>Products & payments setup</li>
+                <li>Custom ecommerce features</li>
+                <li>Scalable with your needs</li>
             </ul>
             <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
         </div>
     </div>
 </section>
 
+<!-- 2. Bots -->
 <section id="bots">
-    <h2>Discord Bots</h2>
-    <p class="section-sub">
-        Moderation, utilities, integrations, custom systems.
-    </p>
-
+    <h2>Bots</h2>
+    <p class="section-sub">Discord bots (moderation, utilities, automation) and custom integrations / scripts for servers.</p>
     <div class="grid">
         <div class="card">
-            <h3>Custom Discord Bot</h3>
-            <div class="price">€5 to €30</div>
+            <h3>Discord Bots</h3>
+            <div class="price">Starting from just €5</div>
             <ul>
                 <li>Built for your server</li>
-                <li>Lightweight and fast</li>
+                <li>Moderation & utility features</li>
                 <li>Expandable later</li>
             </ul>
             <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
         </div>
+        <div class="card">
+            <h3>Custom Integrations / Scripts</h3>
+            <div class="price">Starting from just €5</div>
+            <ul>
+                <li>Automation scripts</li>
+                <li>Custom server tools</li>
+                <li>Other requests welcome</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
     </div>
 </section>
 
+<!-- 3. Apps -->
+<section id="apps">
+    <h2>Apps</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Android Apps</h3>
+            <div class="price">Starting from just €10</div>
+            <ul>
+                <li>Custom Android development</li>
+                <li>UI/UX design included</li>
+                <li>Tested for multiple devices</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+        <div class="card">
+            <h3>Desktop Apps</h3>
+            <div class="price">Starting from just €10</div>
+            <ul>
+                <li>Windows, Mac, or Linux</li>
+                <li>Custom functionality</li>
+                <li>Includes scripts and integrations</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Scripts & Automation -->
+<section id="scripts">
+    <h2>Scripts & Automation</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Server-side Scripts</h3>
+            <div class="price">Starting from just €5</div>
+            <ul>
+                <li>Node.js, Python, etc.</li>
+                <li>Custom backend scripts</li>
+                <li>API integrations</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+        <div class="card">
+            <h3>Client-side Scripts</h3>
+            <div class="price">Starting from just €5</div>
+            <ul>
+                <li>JavaScript or browser scripts</li>
+                <li>Automation and utilities</li>
+                <li>Custom requests welcome</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+        <div class="card">
+            <h3>Task Automation & Utilities</h3>
+            <div class="price">Starting from just €5</div>
+            <ul>
+                <li>Automate repetitive tasks</li>
+                <li>Custom utilities for workflow</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+        <div class="card">
+            <h3>API Integrations</h3>
+            <div class="price">Starting from just €5</div>
+            <ul>
+                <li>Connect apps or services</li>
+                <li>Custom solutions for your project</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Order via Discord</button>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Hosting -->
 <section id="hosting">
     <h2>Hosting that feels illegal</h2>
-    <p class="section-sub">
-        One plan. One price. No upsells.
-    </p>
-
     <div class="hosting-box">
         <div class="hosting-price">€1 / month</div>
-        <div class="hosting-tagline">
-            Yes, actually one euro per month.
+        <ul>
+            <li>One plan only, simple pricing</li>
+            <li>Supported runtimes: Node.js, Python, Java, C#, Rust, Lua</li>
+            <li>Supported databases: MongoDB, MariaDB, PostgreSQL, Redis</li>
+            <li>Automatic restarts & monitoring included</li>
+            <li class="special-price">Only €5 once if your project was built by us</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Optional Other / Custom -->
+<section id="custom">
+    <h2>Other / Custom</h2>
+    <p class="section-sub">Custom requests that don’t fit above. Experimental or unusual projects are welcome.</p>
+    <div class="grid">
+        <div class="card">
+            <h3>Other / Experimental</h3>
+            <div class="price">Contact us</div>
+            <ul>
+                <li>Anything custom or unusual</li>
+                <li>We will discuss feasibility</li>
+                <li>Flexible pricing</li>
+            </ul>
+            <button onclick="location.href='http://dsc.gg/tatom'">Discuss on Discord</button>
         </div>
-
-        <ul>
-            <li><strong>FREE</strong> if your project was built by us</li>
-            <li>Automatic restarts</li>
-            <li>Monitoring included</li>
-            <li>Optimized for small projects</li>
-        </ul>
-
-        <p class="highlight" style="margin-top:24px;">
-            Supported runtimes and databases
-        </p>
-
-        <ul>
-            <li>Node.js, Bun</li>
-            <li>Python, Java, C#, Rust, Lua</li>
-            <li>MongoDB, MariaDB, PostgreSQL, Redis</li>
-        </ul>
     </div>
 </section>
 
-<section id="trust">
-    <h2>Why we are this cheap</h2>
-    <p class="section-sub">
-        Fair question. Here is the honest answer.
-    </p>
-
-    <div class="trust-box">
-        <p>
-            We do not run ads, we do not have sales staff, and we do not rent offices.
-        </p>
-        <p>
-            We keep projects small, focused, and efficient instead of bloating them
-            to justify higher invoices.
-        </p>
-        <p>
-            Most agencies charge for overhead first and work second.
-            We do the opposite.
-        </p>
-        <p>
-            You pay for the work, nothing else.
-        </p>
-    </div>
-</section>
-
+<!-- Contact Section -->
 <section id="contact">
     <h2>Talk to us</h2>
     <p class="section-sub">
-        No forms, no emails, no sales calls.
-        Join the Discord and tell us what you want.
+        No forms, no emails, no sales calls. Join the Discord and tell us what you want.
     </p>
 
     <a href="http://dsc.gg/tatom" class="btn">Join the Discord</a>
 </section>
 
+<!-- Footer -->
 <footer>
-© Flux, Serious Quality, Honest Pricing.
+    <div>© Flux, Serious Quality, Honest Pricing.</div>
+    <div>Flux is owned and operated by Tatom.</div>
 </footer>
 
 </div>
